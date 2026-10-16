@@ -1,0 +1,456 @@
+# General software glossary for speclint.
+#
+# Technical terms and names that are correct in software documents. A word
+# that is not in the word list passes the vocabulary check if it is in this
+# glossary or in the project glossary (.speclint/glossary.txt). One entry on
+# each line:
+#
+#   term | pos | category | note
+#
+# term:     the base form; it can have more than one word ("pull request")
+# pos:      n (noun) or v (verb)
+# category: why the term is necessary:
+#   name       products, programming languages, standards, organizations (n)
+#   component  systems, software components, configurations, infrastructure (n)
+#   concept    engineering, mathematics, and computing concepts; data types (n)
+#   device     machines and computers (n)
+#   unit       units of measurement, time, and dates (n)
+#   document   documents and parts of documents, such as section, table,
+#              figure, and step; a word that is only a heading, such as goal
+#              or scope, is not a part of a document (n)
+#   role       persons and groups (n)
+#   operation  computer operations (v); use one only if no common verb gives
+#              the same information
+# note:     optional
+#
+# Well-known products, programming languages, and open standards are in this
+# glossary. The names of the project itself and its domain words (such as
+# "invoice") go in the project glossary.
+#
+# A lowercase term matches with any case. A term with an uppercase letter
+# (a name, such as "GitHub") matches only with the same case.
+#
+# Use one term for one item, and no slang: "repository", not "repo";
+# "configuration", not "config"; "PostgreSQL", not "Postgres".
+
+# Computing: general
+algorithm                 | n | concept   | engineering term
+application               | n | component | software application
+argument                  | n | component | function or command argument
+array                     | n | concept   | data type
+backend                   | n | component | server side of a system
+bug                       | n | component | software defect
+byte                      | n | unit      | unit of data
+cache                     | n | component | stored copy of data
+character                 | n | concept   | text character
+command                   | n | component | shell or CLI command
+command line              | n | component | command-line interface
+comment                   | n | component | code comment or review comment
+computer                  | n | device    | computer
+configuration             | n | component | settings of a system or tool
+CPU                       | n | component | processor
+credential                | n | component | password, key, or token
+cron                      | n | component | Unix job scheduler
+default                   | n | component | default value
+digit                     | n | concept   | text character 0-9
+directory                 | n | component | file system directory
+dotfile                   | n | component | configuration file whose name starts with a dot
+encryption                | n | component | data encryption
+environment               | n | component | runtime or deployment environment
+error handling            | n | component | code that handles errors
+event                     | n | component | software event
+feature                   | n | component | software feature
+feature flag              | n | component | switch that turns a feature on or off
+field                     | n | component | field of a record or form
+file                      | n | component | computer file
+filter                    | n | component | search, data, or request filter
+flag                      | n | component | command-line flag or feature flag
+folder                    | n | component | file system folder
+format                    | n | component | data format
+framework                 | n | component | software framework
+handler                   | n | component | function that handles an event or request
+hash                      | n | concept   | hash value or function
+hook                      | n | component | Git hook or extension point
+hyphen                    | n | concept   | text character -
+I/O                       | n | component | input and output
+ID                        | n | component | identifier
+identifier                | n | component | name or number that identifies an item
+import                    | n | component | import statement or data import
+indentation               | n | concept   | spaces at the start of a line
+integer                   | n | concept   | data type
+key                       | n | component | API key, database key, or keyboard key
+label                     | n | component | user interface or issue label
+laptop                    | n | device    | portable computer
+letter                    | n | concept   | text character a-z
+line                      | n | component | line of text or code
+lockfile                  | n | component | file that pins dependency versions
+logger                    | n | component | component that writes logs
+lowercase                 | n | concept   | small letters
+machine                   | n | device    | computer or server
+memory                    | n | component | computer memory
+menu                      | n | component | user interface menu
+module                    | n | component | code module
+newline                   | n | component | line break character
+null                      | n | concept   | value that means no value
+option                    | n | component | command-line option
+package                   | n | component | software package
+parameter                 | n | component | function, command, or request parameter
+path                      | n | component | file system or URL path
+pattern                   | n | component | match pattern
+permission                | n | component | access right
+plain text                | n | component | text that is not encrypted or formatted
+platform                  | n | component | software platform
+program                   | n | component | software program
+project                   | n | component | software project
+root                      | n | component | root directory or root user
+script                    | n | component | shell or program script
+secret                    | n | component | password, key, or token that must stay private
+session                   | n | component | user or network session
+setting                   | n | component | configuration setting
+shortcut                  | n | component | keyboard shortcut
+state                     | n | component | system state
+statistics                | n | concept   | counted or computed values
+status                    | n | component | state of a request, job, or item
+string                    | n | concept   | data type
+suffix                    | n | concept   | end part of a name
+symlink                   | n | component | symbolic link
+tab                       | n | component | tab character or user interface tab
+template                  | n | component | file used as a model for other files
+terminal                  | n | component | terminal window
+text                      | n | component | text data
+timeout                   | n | component | time limit for an operation
+timestamp                 | n | unit      | date and time value
+token                     | n | component | access token or text token
+user                      | n | role      | person who uses a system
+username                  | n | component | user name for login
+variable                  | n | concept   | program or environment variable
+version                   | n | component | software version
+whitespace                | n | component | space, tab, and newline characters
+window                    | n | component | time window or user interface window
+workflow                  | n | component | automated sequence of jobs
+
+# Web, API, and network
+API                       | n | component | application programming interface
+API key                   | n | component | key that identifies an API client
+authentication            | n | component | check of identity
+authorization             | n | component | check of permissions
+base URL                  | n | component | URL that all endpoints start with
+Bearer token              | n | component | HTTP authentication token
+body                      | n | component | request or response body
+CDN                       | n | component | content delivery network
+client                    | n | component | program that sends requests
+cursor                    | n | component | pagination or database cursor
+DDoS                      | n | concept   | distributed denial-of-service attack
+DDoS attack               | n | concept   | distributed denial-of-service attack
+domain                    | n | component | internet domain name
+egress                    | n | component | outgoing network traffic
+email                     | n | component | electronic mail
+endpoint                  | n | component | API endpoint
+gateway                   | n | component | API or network gateway
+header                    | n | component | HTTP or file header
+host                      | n | component | computer on a network
+IP                        | n | component | Internet Protocol
+IP address                | n | component | network address
+latency                   | n | concept   | delay of a response
+link                      | n | component | hyperlink
+login                     | n | component | login page or action
+NAT                       | n | component | network address translation
+network                   | n | component | computer network
+offset                    | n | concept   | pagination offset
+page                      | n | component | web page or page of results
+pagination                | n | component | results split into pages
+protocol                  | n | component | network protocol
+query                     | n | component | database or URL query
+rate limit                | n | component | maximum request rate
+rate limiting             | n | component | function that applies rate limits
+referrer                  | n | component | page that sent a visitor
+request                   | n | component | HTTP or API request
+response                  | n | component | HTTP or API response
+route                     | n | component | HTTP route
+server                    | n | component | server computer or program
+status code               | n | component | HTTP status code
+traffic                   | n | component | network or request traffic
+URL                       | n | component | web address
+VLAN                      | n | component | virtual LAN
+webhook                   | n | component | HTTP callback
+
+# Data and storage
+analytics                 | n | component | data analysis system
+atomicity                 | n | concept   | all-or-nothing property of a transaction
+backup                    | n | component | database or file backup
+batch                     | n | component | group of items processed together
+batch job                 | n | component | job that processes many records
+broker                    | n | component | message broker
+cluster                   | n | component | group of servers
+consumer                  | n | component | program that reads messages
+data store                | n | component | database or cache
+database                  | n | component | database
+dataset                   | n | component | collection of data
+dead-letter queue         | n | component | queue for messages that failed
+deduplication             | n | concept   | removal of duplicate items
+defragmentation           | n | component | memory or disk defragmentation
+disk                      | n | component | storage disk
+eviction                  | n | component | removal of items from a cache
+expiry                    | n | component | end of the time to live
+export                    | n | component | data export
+fragmentation             | n | component | memory or disk fragmentation
+idempotency               | n | concept   | same result when repeated
+index                     | n | component | database or search index
+instance                  | n | component | one running copy of a service
+keyspace                  | n | component | set of keys in a database
+message                   | n | component | message in a queue or channel
+messaging                 | n | component | message system
+migration                 | n | component | data or schema migration
+node                      | n | component | server in a cluster
+partition                 | n | component | part of a topic or disk
+pool                      | n | component | connection or worker pool
+producer                  | n | component | program that writes messages
+queue                     | n | component | message or job queue
+record                    | n | component | database or log record
+registry                  | n | component | package or container registry
+replica                   | n | component | copy of a database or service
+replication               | n | component | copy of data to replicas
+retention                 | n | component | how long data is kept
+schema                    | n | component | data structure definition
+table                     | n | component | database table
+topic                     | n | component | message topic
+transaction               | n | component | database transaction
+TTL                       | n | component | time to live
+WAL                       | n | component | write-ahead log of a database
+
+# Version control, build, and CI
+artifact                  | n | component | build output
+badge                     | n | component | status badge in a README
+branch                    | n | component | Git branch
+build                     | n | component | CI build
+build matrix              | n | component | set of build configurations
+CI                        | n | component | continuous integration
+commit                    | n | component | Git commit
+conflict                  | n | component | merge or sync conflict
+contributor               | n | role      | person who sends changes to a project
+coverage                  | n | component | test coverage
+dependency                | n | component | package that a project needs
+deployment                | n | component | release to an environment
+history                   | n | component | commit history
+integration               | n | component | connection to another system
+job                       | n | component | CI or batch job
+LTS                       | n | component | long-term support release
+pipeline                  | n | component | CI pipeline
+private repository        | n | component | repository that only its members can read
+pull request              | n | component | request to merge changes
+release                   | n | component | software release
+remote                    | n | component | Git remote
+repository                | n | component | Git repository
+rollback                  | n | component | return to an earlier version
+rollout                   | n | component | gradual release
+tag                       | n | component | Git tag
+virtual environment       | n | component | Python virtual environment
+
+# Operations and reliability
+alert                     | n | component | monitoring alert
+architecture              | n | component | system architecture
+AZ                        | n | component | availability zone
+backoff                   | n | concept   | delay before a retry
+burst                     | n | concept   | short period of high load
+circuit breaker           | n | component | component that stops calls to a failed service
+counter                   | n | component | stored count
+dashboard                 | n | component | monitoring or web dashboard
+engine                    | n | component | database or workflow engine
+exit status               | n | component | process exit status
+exponential backoff       | n | concept   | retry delay that doubles
+failover                  | n | component | move of a role to a standby
+failure                   | n | concept   | error or fault
+infrastructure            | n | component | servers and networks
+jitter                    | n | concept   | random part of a delay
+lag                       | n | concept   | replication or consumer lag
+limiter                   | n | component | component that limits a rate
+load                      | n | concept   | work on a system
+metric                    | n | component | measured value
+monitoring                | n | component | observation of a system
+orchestration             | n | component | coordination of services or containers
+orchestrator              | n | component | component that coordinates services
+panel                     | n | component | dashboard panel
+policy                    | n | component | eviction, retry, or access policy
+provider                  | n | component | cloud or service provider
+recovery                  | n | component | return to normal operation
+service                   | n | component | software service
+severity                  | n | component | alert or incident severity
+threshold                 | n | concept   | limit value
+throttling                | n | component | limit on a rate
+ticket                    | n | component | support or issue ticket
+token bucket              | n | concept   | rate limit algorithm
+trace                     | n | component | distributed tracing trace
+
+# Documentation
+appendix                  | n | document  | part of a document
+design document           | n | document  | type of document
+document                  | n | document  | document
+documentation             | n | document  | documents of a product
+glossary                  | n | document  | list of terms
+guide                     | n | document  | type of document
+license                   | n | document  | software license
+note                      | n | document  | notice in a document
+README                    | n | document  | file that introduces a project
+reference                 | n | document  | API reference (a part of documentation)
+RFC                       | n | document  | request for comments document
+runbook                   | n | document  | operations procedure document
+section                   | n | document  | part of a document
+tutorial                  | n | document  | type of document
+
+# People and groups
+author                    | n | role      | person who writes a document or code
+customer                  | n | role      | person or company that buys a product
+developer                 | n | role      | software developer
+owner                     | n | role      | person or team that owns an item
+reviewer                  | n | role      | person who reviews a change
+support                   | n | role      | support team
+team                      | n | role      | group of persons
+team lead                 | n | role      | person who leads a team
+
+# Products, languages, standards, and organizations
+Apache                    | n | name      | Apache Software Foundation, Apache License
+CSV                       | n | name      | file format
+Envoy                     | n | name      | proxy server
+ESLint                    | n | name      | JavaScript linter
+Git                       | n | name      | version control system
+GitHub                    | n | name      | code hosting service
+GitHub Actions            | n | name      | CI service
+Grafana                   | n | name      | dashboard tool
+gRPC                      | n | name      | RPC protocol
+Homebrew                  | n | name      | package manager
+HTTP                      | n | name      | protocol
+HTTPS                     | n | name      | protocol
+ISO                       | n | name      | standards organization and its standards
+Jest                      | n | name      | JavaScript test framework
+JSON                      | n | name      | data format
+Kafka                     | n | name      | message broker
+Linux                     | n | name      | operating system
+Lua                       | n | name      | programming language
+macOS                     | n | name      | operating system
+Markdown                  | n | name      | text format
+MIT                       | n | name      | MIT License
+Node.js                   | n | name      | JavaScript runtime
+npm                       | n | name      | Node.js package manager
+PagerDuty                 | n | name      | on-call service
+PgBouncer                 | n | name      | PostgreSQL connection pooler
+pipx                      | n | name      | Python tool installer
+PostgreSQL                | n | name      | database
+pre-commit                | n | name      | Git hook framework
+PyPI                      | n | name      | Python package index
+Python                    | n | name      | programming language
+Raspberry Pi              | n | name      | small computer
+Redis                     | n | name      | in-memory data store
+REST                      | n | name      | API style
+Ruff                      | n | name      | Python linter and formatter
+Slack                     | n | name      | chat service
+SMTP                      | n | name      | mail protocol
+SNS                       | n | name      | AWS notification service
+SQLite                    | n | name      | database
+SQS                       | n | name      | AWS queue service
+systemd                   | n | name      | Linux service manager
+TCP                       | n | name      | protocol
+Terraform                 | n | name      | infrastructure tool
+TOML                      | n | name      | file format
+uv                        | n | name      | Python package manager
+YAML                      | n | name      | file format
+
+# Units and time
+April                     | n | unit      | month
+August                    | n | unit      | month
+day                       | n | unit      | unit of time
+December                  | n | unit      | month
+February                  | n | unit      | month
+Friday                    | n | unit      | day of the week
+GB                        | n | unit      | gigabyte
+hour                      | n | unit      | unit of time
+January                   | n | unit      | month
+July                      | n | unit      | month
+June                      | n | unit      | month
+March                     | n | unit      | month
+May                       | n | unit      | month
+MB                        | n | unit      | megabyte
+min                       | n | unit      | minute
+minute                    | n | unit      | unit of time
+Monday                    | n | unit      | day of the week
+month                     | n | unit      | unit of time
+ms                        | n | unit      | millisecond
+November                  | n | unit      | month
+October                   | n | unit      | month
+quarter                   | n | unit      | three months
+s                         | n | unit      | second
+Saturday                  | n | unit      | day of the week
+second                    | n | unit      | unit of time
+September                 | n | unit      | month
+Sunday                    | n | unit      | day of the week
+TB                        | n | unit      | terabyte
+Thursday                  | n | unit      | day of the week
+Tuesday                   | n | unit      | day of the week
+UTC                       | n | unit      | Coordinated Universal Time
+Wednesday                 | n | unit      | day of the week
+week                      | n | unit      | unit of time
+year                      | n | unit      | unit of time
+
+# Technical verbs
+authenticate              | v | operation | identify a client or user
+authorize                 | v | operation | authorize access or a payment
+block                     | v | operation | blocking call (I/O)
+cache                     | v | operation | store in a cache
+call                      | v | operation | call a function or API
+click                     | v | operation | input
+clone                     | v | operation | git clone
+commit                    | v | operation | version control or database commit
+consume                   | v | operation | consume messages from a queue
+create                    | v | operation | create a file, branch, or resource
+debug                     | v | operation | find and remove bugs
+delete                    | v | operation | user interface
+disable                   | v | operation | user interface
+download                  | v | operation | system operation
+edit                      | v | operation | edit a file or record
+emit                      | v | operation | emit an event or signal
+encrypt                   | v | operation | encrypt data
+evict                     | v | operation | remove an item from a cache
+fail over                 | v | operation | database failover
+fetch                     | v | operation | fetch data
+filter                    | v | operation | user interface
+fork                      | v | operation | git fork
+format                    | v | operation | format code or a disk
+generate                  | v | operation | generate a file, key, or code
+initialize                | v | operation | initialize a project or variable
+insert                    | v | operation | database insert
+lint                      | v | operation | check code with a linter
+log                       | v | operation | write to a log
+log out                   | v | operation | end a user session
+manage                    | v | operation | system operation
+migrate                   | v | operation | migrate data or a schema
+parse                     | v | operation | parse text or data
+pass                      | v | operation | pass an argument or value
+pause                     | v | operation | pause a process (STOP does not mean that it continues later)
+persist                   | v | operation | write data to storage
+poll                      | v | operation | poll a device or endpoint
+press                     | v | operation | input
+process                   | v | operation | system operation
+promote                   | v | operation | promote a replica
+publish                   | v | operation | publish a message or package
+rebuild                   | v | operation | rebuild a replica, index, or image
+redirect                  | v | operation | send a request to a different URL
+refresh                   | v | operation | refresh a cache or page
+rename                    | v | operation | rename a file
+replay                    | v | operation | replay a log or events
+restart                   | v | operation | restart a service
+restore                   | v | operation | restore from a backup or cache
+resync                    | v | operation | copy data again from the primary
+retry                     | v | operation | retry an operation
+return                    | v | operation | a function or API returns a value
+revoke                    | v | operation | revoke a key or permission
+roll back                 | v | operation | go back to an earlier version
+run                       | v | operation | run a program or job
+save                      | v | operation | user interface
+scale                     | v | operation | change the number of instances
+sort                      | v | operation | user interface
+stage                     | v | operation | add changes to the Git index
+stream                    | v | operation | stream data or logs
+sync                      | v | operation | make data the same in two places
+time out                  | v | operation | an operation times out
+update                    | v | operation | system operation
+upload                    | v | operation | system operation
+validate                  | v | operation | user interface

@@ -1,0 +1,53 @@
+{
+  "time": "2026-10-09T11:35:48",
+  "input": {
+    "session_id": "f2a52483-03ec-4952-9bc2-4791812bc425",
+    "transcript_path": "/home/user/.claude/projects/example/f2a52483-03ec-4952-9bc2-4791812bc425.jsonl",
+    "cwd": "/tmp/example-project",
+    "scratchpad_dir": "/tmp/scratchpad",
+    "prompt_id": "82e1fa9b-0d95-46d9-84f1-14f7e07c2397",
+    "permission_mode": "acceptEdits",
+    "effort": {
+      "level": "medium"
+    },
+    "hook_event_name": "PostToolUse",
+    "tool_name": "Edit",
+    "tool_input": {
+      "file_path": "/tmp/example-project/docs/setup.md",
+      "old_string": "pinned version (e.g. `requests==2.32.3`).",
+      "new_string": "pinned version (for example, `requests==2.32.3`).",
+      "replace_all": false
+    },
+    "tool_response": {
+      "filePath": "/tmp/example-project/docs/setup.md",
+      "oldString": "pinned version (e.g. `requests==2.32.3`).",
+      "newString": "pinned version (for example, `requests==2.32.3`).",
+      "originalFile": "# Project Setup\n\nThis guide covers creating a Python virtual environment, installing dependencies\nfrom `requirements.txt`, and the mistakes that most often break a setup.\n\n## 1. Create the virtual environment\n\nFrom the project root, using Python 3.11 or newer:\n\n```bash\npython3 -m venv .venv            # or: uv venv\nsource .venv/bin/activate        # Windows: .venv\\Scripts\\activate\n```\n\nYour prompt should now show `(.venv)`. Confirm with `which python`. It should\npoint inside `.venv/`.\n\n## 2. Install dependencies\n\n```bash\npython -m pip install --upgrade pip\npython -m pip install -r requirements.txt   # or: uv pip install -r requirements.txt\n```\n\nWhen you add a package, install it inside the venv and record it in\n`requirements.txt` with a pinned version (e.g. `requests==2.32.3`).\n\n## 3. Common mistakes to avoid\n\n- **Installing outside the venv.** Always activate `.venv` first. Never use\n  `sudo pip`, `pip install --user`, or `--break-system-packages`.\n- **Calling bare `pip`.** It may belong to another Python. Use `python -m pip`.\n- **Committing `.venv/`.** Add it to `.gitignore`; commit `requirements.txt` instead.\n- **Moving or renaming the project folder.** Venvs hard-code their paths; delete\n  `.venv` and recreate it rather than trying to fix it.\n- **Using the system Python.** On macOS, `/usr/bin/python3` is Apple's; use a\n  managed interpreter (e.g. `uv python install 3.12`).\n- **Unpinned or stale requirements.** Unpinned versions drift between machines.\n  After adding packages, update `requirements.txt` and re-run the install.\n\nTo start over: `deactivate && rm -rf .venv`, then repeat steps 1–2.\n",
+      "structuredPatch": [
+        {
+          "oldStart": 23,
+          "oldLines": 7,
+          "newStart": 23,
+          "newLines": 7,
+          "lines": [
+            " ```",
+            " ",
+            " When you add a package, install it inside the venv and record it in",
+            "-`requirements.txt` with a pinned version (e.g. `requests==2.32.3`).",
+            "+`requirements.txt` with a pinned version (for example, `requests==2.32.3`).",
+            " ",
+            " ## 3. Common mistakes to avoid",
+            " "
+          ]
+        }
+      ],
+      "userModified": false,
+      "replaceAll": false
+    },
+    "tool_use_id": "toolu_01T3XHFoeTmQf7QbvfW4gAjF",
+    "duration_ms": 3
+  },
+  "document": "# Project Setup\n\nThis guide covers creating a Python virtual environment, installing dependencies\nfrom `requirements.txt`, and the mistakes that most often break a setup.\n\n## 1. Create the virtual environment\n\nFrom the project root, using Python 3.11 or newer:\n\n```bash\npython3 -m venv .venv            # or: uv venv\nsource .venv/bin/activate        # Windows: .venv\\Scripts\\activate\n```\n\nYour prompt should now show `(.venv)`. Confirm with `which python`. It should\npoint inside `.venv/`.\n\n## 2. Install dependencies\n\n```bash\npython -m pip install --upgrade pip\npython -m pip install -r requirements.txt   # or: uv pip install -r requirements.txt\n```\n\nWhen you add a package, install it inside the venv and record it in\n`requirements.txt` with a pinned version (for example, `requests==2.32.3`).\n\n## 3. Common mistakes to avoid\n\n- **Installing outside the venv.** Always activate `.venv` first. Never use\n  `sudo pip`, `pip install --user`, or `--break-system-packages`.\n- **Calling bare `pip`.** It may belong to another Python. Use `python -m pip`.\n- **Committing `.venv/`.** Add it to `.gitignore`; commit `requirements.txt` instead.\n- **Moving or renaming the project folder.** Venvs hard-code their paths; delete\n  `.venv` and recreate it rather than trying to fix it.\n- **Using the system Python.** On macOS, `/usr/bin/python3` is Apple's; use a\n  managed interpreter (e.g. `uv python install 3.12`).\n- **Unpinned or stale requirements.** Unpinned versions drift between machines.\n  After adding packages, update `requirements.txt` and re-run the install.\n\nTo start over: `deactivate && rm -rf .venv`, then repeat steps 1–2.\n",
+  "exit_code": 2,
+  "output": "speclint: 4 problems from the earlier report remain in /tmp/example-project/docs/setup.md."
+}

@@ -1,0 +1,5 @@
+{
+  "name": "speclint",
+  "version": "0.1.0",
+  "description": "Checks Markdown files that Claude writes for plain, simple English (sentence length, passive voice, vocabulary, and more) and asks Claude to fix the findings."
+}
